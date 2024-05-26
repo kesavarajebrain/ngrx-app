@@ -1,0 +1,16 @@
+<form style="background-color: white;" [formGroup]="feedForm" (ngSubmit)="saveFeed()">
+  <mat-card>
+    <mat-card-header><h4>Create-feed component</h4>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-form-field style="width: -webkit-fill-available;">
+            <input type="text" formControlName="title" width="100%" class="form-control mb-3" placeholder="Enter Title!"/>
+            <textarea type="text"  formControlName="content" width="100%" class="form-control mb-3" placeholder="Enter Content!"></textarea>
+        </mat-form-field>
+        </mat-card-content>
+    <mat-card-actions>
+        <button type="submit" mat-raised-button color="accent">Save</button>&nbsp;
+        <button mat-raised-button color="warm" (click)="close()">Close</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

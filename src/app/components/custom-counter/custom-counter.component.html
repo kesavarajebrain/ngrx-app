@@ -1,0 +1,14 @@
+<h4>Custom-counter component</h4>
+<div class="row">
+    <div class="col-6">
+            <input type="number" class="form-control" placeholder="Enter Number!" [(ngModel)]="customcount"/>
+    </div>
+    <div class="col-6 row">
+        <div class="col-6">
+            <button mat-raised-button color="accent" (click)="plus()">Plus</button>
+        </div>
+        <div class="col-6">
+            <button mat-raised-button color="accent" (click)="minus()">Minus</button>
+        </div>
+    </div>
+</div>

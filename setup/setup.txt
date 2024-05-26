@@ -1,0 +1,46 @@
+NGRX - Reactive State for Angular
+
+install cmd - ng add @ngrx/store@latest - it will install latest ngrx
+
+Basic counter example, so create the basic structure
+
+New folder - shared/store - inside we have actions, reducers, state files
+ ng g s shared/master
+ CREATE src/app/shared/master.service.spec.ts (373 bytes)
+ CREATE src/app/shared/master.service.ts (144 bytes)
+
+ inside the shared folder create our store
+
+ inside create 3 files, 
+ counter.action.ts, counter.reducer.ts, counter.state.ts, counter.modal.ts, counter.selector.ts
+
+ actions - define our actions
+ reducer - do our logic what performed inside the store
+ state - default state define here
+ modal - what are the content in the state we define here
+ selector - avoid the performance issue, if the store configured multiple place so once state changes means reflected all places
+
+ include our store to app.module
+
+ npm install ngx-bootstrap bootstrap --save
+
+ ng add @angular/material
+
+ adding observable for easy access state values
+
+ add selector 
+
+ debugging tools
+ 1. install redux devtools extension
+ 2. ng add @ngrx/store-devtools@latest
+
+ create another store for the feed 
+
+ create another folder inside our store called global
+
+ global 
+
+ 
+
+
+
