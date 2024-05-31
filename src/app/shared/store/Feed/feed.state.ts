@@ -2,6 +2,7 @@ import { feedModal, feeds } from '../Feed/feed.modal';
 
 export const initialState: feeds = {
   feedList: [
+    // comment it because dummy content
     {
       id: 1,
       title: 'Ngrx feed store - content 1',

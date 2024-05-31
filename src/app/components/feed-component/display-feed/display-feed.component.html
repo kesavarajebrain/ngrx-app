@@ -3,12 +3,32 @@
     <h4>Display-feed component</h4>
   </div>
   <div class="col-6">
-    <button class="mb-2" style="float: right" (click)="creteFeed()" mat-raised-button color="primary">
+    <button
+      class="mb-2"
+      style="float: right"
+      (click)="creteFeed()"
+      mat-raised-button
+      color="primary"
+    >
       Create Feed
     </button>
   </div>
 </div>
 <mat-card *ngFor="let feed of feedList" class="mb-2">
-  <mat-card-header>{{ feed.id }} - {{ feed.title }}</mat-card-header>
-  <mat-card-content>{{ feed.content }}</mat-card-content>
+  <div class="row">
+    <div class="col-4">
+      <mat-card-header>{{ feed.id }} - {{ feed.title }}</mat-card-header>
+      <mat-card-content>{{ feed.content }}</mat-card-content>
+    </div>
+    <div class="col-4">
+      <div>
+        <button mat-mini-fab aria-label="Example icon button with a home icon" color="primary" (click)="editFeed(feed.id)">
+          <mat-icon>edit</mat-icon>
+        </button> &nbsp;
+        <button mat-mini-fab aria-label="Example icon button with a home icon" color="primary" (click)="deleteFeed(feed.id)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
 </mat-card>

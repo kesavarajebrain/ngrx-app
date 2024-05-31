@@ -38,7 +38,9 @@ New folder - shared/store - inside we have actions, reducers, state files
 
  create another folder inside our store called global
 
- global 
+ global - maintain global states
+
+ ng add @ngrx/effects@latest
 
  
 

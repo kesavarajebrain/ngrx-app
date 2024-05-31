@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-6">
+    <h4>Display-user component</h4>
+  </div>
+  <div class="col-6">
+    <button class="mb-2" style="float: right" (click)="createUser()" mat-raised-button color="warn">
+      Create User 
+    </button>
+  </div>
+</div>
+<!-- Adding condition for render -->
+<div *ngIf="userInfo.usersList.length <= 0">
+<p class="text-danger">No Data Available!</p>
+</div>
+<div *ngIf="!userInfo.ErrorMessage && userInfo.usersList.length > 0">
+  <mat-card *ngFor="let user of userInfo.usersList" class="mb-2">
+    <div class="row">
+      <div class="col-4">
+        <mat-card-header>{{ user.id }} - {{ user.name }}</mat-card-header>
+        <mat-card-content
+          >{{ user.email }} <br />{{ user.website }}</mat-card-content
+        >
+      </div>
+      <div class="col-4">
+        <div>
+          <button
+            mat-mini-fab
+            aria-label="Example icon button with a home icon" (click)="editUser(user.id)"
+            color="warn"
+          >
+            <mat-icon>edit</mat-icon>
+          </button>
+          &nbsp;
+          <button (click)="deleteUser(user.id)"
+            mat-mini-fab
+            aria-label="Example icon button with a home icon"
+            color="warn"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+<mat-card *ngIf="userInfo.ErrorMessage">
+  <mat-card-header>
+    <p class="text-danger">{{userInfo.ErrorMessage}}</p>
+  </mat-card-header>
+</mat-card>
